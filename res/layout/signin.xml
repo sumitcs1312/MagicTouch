@@ -1,0 +1,120 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_2" >
+
+    <TextView
+        android:id="@+id/signinlabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:layout_marginTop="30dp"
+        android:text="@string/signin" />
+
+    <EditText
+        android:id="@+id/signintouchid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/signinlabel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:background="@drawable/text_bg"
+        android:ems="10"
+        android:hint="@string/touchid_or_email"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:textColorHint="@android:color/white"
+        android:inputType="textEmailAddress" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/signinpassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/signintouchid"
+        android:layout_below="@+id/signintouchid"
+        android:layout_marginTop="14dp"
+        android:layout_marginRight="10dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:background="@drawable/text_bg"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:textStyle="bold"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword" />
+
+    <TextView
+        android:id="@+id/error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/signinpassword"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:textColor="@android:color/holo_red_dark"
+        android:text="Invalid touch/email ID or password" />
+
+    <TextView
+        android:id="@+id/forgot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:layout_below="@+id/signin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:text="Forgot password?" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        
+        android:layout_alignBottom="@+id/signintouchid"
+        android:layout_toRightOf="@+id/signintouchid"
+        android:src="@drawable/ic_action_error" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/signinpassword"
+        android:layout_toRightOf="@+id/signinpassword"
+        android:src="@drawable/ic_action_error" />
+
+    <TextView
+        android:id="@+id/registerlink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/forgot"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:text="@string/create_me_touch_id"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/signin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/signinpassword"
+        android:layout_alignRight="@+id/signinpassword"
+        android:layout_below="@+id/error"
+        android:layout_marginTop="14dp"
+        android:background="#ffbf25"
+        android:gravity="center"
+        android:text="@string/sign_in"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
+
+</RelativeLayout>
